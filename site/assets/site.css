@@ -110,6 +110,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .release-meta { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; }
 .release-meta span { border: 1px solid #52606b; border-radius: 7px; padding: .35rem .6rem; color: #e1e6ea; font-size: .85rem; }
 .release-card .button-disabled { white-space: nowrap; }
+.release-actions { display: grid; justify-items: start; gap: .55rem; }
+.checksum-link { color: #bdc8d0; font-size: .9rem; }
 .info-columns { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 4vw, 3rem); }
 .info-block { padding-top: 1.2rem; border-top: 1px solid var(--line); }
 .info-block h3 { margin: 0 0 .55rem; font-size: 1.13rem; }

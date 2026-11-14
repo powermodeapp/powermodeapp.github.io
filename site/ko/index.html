@@ -44,13 +44,13 @@
             <h1>필요할 때는 Mac을 계속 사용할 수 있게.</h1>
             <p class="hero-copy">메뉴 막대에서 서버 모드와 일반 모드를 전환하세요. 바뀌는 설정을 미리 확인하고, 승인한 뒤 적용할 수 있습니다. 기존 설정은 백업해 복원할 수 있습니다.</p>
             <div class="hero-actions">
-              <span class="button button-disabled" aria-disabled="true">출시 준비 중</span>
+              <a class="button button-primary" href="https://github.com/powermodeapp/PowerModeManager-Releases/releases/latest/download/PowerModeManager.dmg">PowerModeManager 다운로드</a>
               <a class="button button-secondary" href="#modes">사용 방법 보기</a>
             </div>
-            <p class="status-note">PowerModeManager 1.0.0 (Build 8)을 macOS 15 최소 타깃으로 준비하고 있습니다. 새 설치 파일의 서명·공증과 출시 검증을 마친 뒤 다운로드를 엽니다.</p>
-            <div class="status-line" aria-label="출시 예정 지원 범위">
+            <p class="status-note">PowerModeManager 1.0.0 (Build 8)을 Apple Silicon Mac의 macOS 15–27에서 사용할 수 있습니다. 설치 파일은 서명·공증되었으며 Gatekeeper 검증을 통과했습니다.</p>
+            <div class="status-line" aria-label="릴리스 지원 범위">
               <span class="status-pill"><span class="status-dot" aria-hidden="true"></span>Apple Silicon · arm64</span>
-              <span class="status-pill">macOS 15–27 목표</span>
+              <span class="status-pill">macOS 15–27</span>
             </div>
           </div>
           <figure class="preview" aria-label="PowerModeManager 두 모드의 개념 그림">
@@ -141,20 +141,20 @@
         <div class="wrap">
           <div class="section-heading">
             <p class="eyebrow">시작하기</p>
-            <h2>검증을 마친 설치 파일을 준비하고 있습니다.</h2>
-            <p class="section-lead">첫 공개 버전은 Apple Silicon에서 검증 중입니다. 최소 배포 타깃은 macOS 15로 정했으며, macOS 15–27 지원 범위는 기기 검증을 마칠 때까지 잠정 상태입니다. 모든 출시 검증 후 이곳에 다운로드 링크를 표시합니다.</p>
+            <h2>PowerModeManager 1.0.0을 다운로드하세요.</h2>
+            <p class="section-lead">Build 8은 macOS Sequoia와 macOS 27.0.1에서 검증했습니다. Apple Silicon과 macOS 15–27이 필요하며, 앱은 영어와 한국어를 지원합니다.</p>
           </div>
           <div class="release-card">
             <div>
               <p class="eyebrow">첫 안정판</p>
               <h2>1.0.0 · Build 8</h2>
-              <p>Apple Silicon 전용입니다. 서명·공증한 DMG로 배포할 예정입니다. 실제 검증한 Mac 모델과 macOS 빌드 번호는 릴리스 노트에 공개합니다.</p>
+              <p>Apple Silicon 전용입니다. Mac16,8의 macOS 27.0.1 (Build 26A434)과 macOS Sequoia UTM 가상 머신에서 확인했습니다. 한국어 UI와 설정 적용·복원을 검증했습니다.</p>
               <div class="release-meta"><span>arm64</span><span>macOS 15–27 목표</span><span>무료 · MIT 라이선스</span></div>
             </div>
-            <span class="button button-disabled" aria-disabled="true">아직 다운로드할 수 없음</span>
+            <div class="release-actions"><a class="button button-primary" href="https://github.com/powermodeapp/PowerModeManager-Releases/releases/latest/download/PowerModeManager.dmg">DMG 다운로드</a><a class="checksum-link" href="https://github.com/powermodeapp/PowerModeManager-Releases/releases/latest/download/PowerModeManager.dmg.sha256">SHA-256 체크섬</a></div>
           </div>
           <div class="steps" style="margin-top: 1.25rem">
-            <article class="step"><h3>DMG 열기</h3><p>배포가 시작되면 설치 파일을 내려받아 PowerModeManager를 응용 프로그램 폴더로 옮기세요.</p></article>
+            <article class="step"><h3>DMG 열기</h3><p>설치 파일을 내려받아 PowerModeManager를 응용 프로그램 폴더로 옮기세요.</p></article>
             <article class="step"><h3>변경 내용 확인</h3><p>메뉴 막대 앱에서 바뀔 설정을 살펴보고, 원하는 변경만 승인하세요.</p></article>
             <article class="step"><h3>메뉴에서 종료</h3><p>메인 창을 닫아도 메뉴 막대 앱은 계속 실행됩니다. 앱 메뉴에서 종료를 선택하세요.</p></article>
             <article class="step"><h3>업데이트 또는 제거</h3><p>업데이트는 직접 내려받아 설치합니다. 제거하려면 응용 프로그램 폴더에서 앱을 삭제하세요. 백업과 선택적 기록은 Mac에 남으므로 직접 삭제할 수 있습니다.</p></article>
