@@ -7,4 +7,4 @@ This repository contains the public PowerModeManager website, served at <https:/
 - Releases: <https://github.com/powermodeapp/PowerModeManager-Releases/releases>
 - Issue reports: <https://github.com/powermodeapp/PowerModeManager-Releases/issues>
 
-The release is being verified. The website keeps downloads disabled until the signed and notarized installer passes the release checks.
+The site provides the signed and notarized PowerModeManager installer and release information in English and Korean.
