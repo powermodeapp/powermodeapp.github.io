@@ -99,7 +99,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .warning { display: grid; grid-template-columns: auto 1fr; gap: .9rem; margin-top: 1.4rem; padding: 1.15rem 1.25rem; border: 1px solid #e6cb83; border-radius: 9px; background: var(--warning-bg); color: var(--warning-ink); }
 .warning-mark { display: inline-grid; width: 1.6rem; height: 1.6rem; place-items: center; border: 1px solid #ae8321; border-radius: 50%; font-weight: 800; }
 .warning p { margin: 0; }
-.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; counter-reset: step; }
+.steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; counter-reset: step; }
 .step { padding: 1.25rem; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); counter-increment: step; }
 .step::before { content: "0" counter(step); color: var(--blue-dark); font-size: .85rem; font-weight: 800; }
 .step h3 { margin: .45rem 0 .4rem; font-size: 1.1rem; }
@@ -131,7 +131,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .nav { gap: .9rem; flex-wrap: wrap; }
   .hero-inner { grid-template-columns: 1fr; }
   .preview { justify-self: start; max-width: 560px; }
-  .detail-grid { grid-template-columns: 1fr 1fr; }
+  .detail-grid, .steps { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 600px) {
   .wrap { width: min(100% - 32px, 1160px); }
