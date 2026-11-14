@@ -125,6 +125,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .release-meta span { border: 1px solid #52606b; border-radius: 7px; padding: .35rem .6rem; color: #e1e6ea; font-size: .85rem; }
 .release-card .button-disabled { white-space: nowrap; }
 .release-actions { display: grid; justify-items: start; gap: .55rem; }
+.brew-install { max-width: 27rem; margin-top: .9rem; }
+.brew-install p { margin: 0 0 .35rem; color: #e1e6ea; font-size: .9rem; font-weight: 650; }
+.brew-install pre { max-width: 100%; margin: 0 0 .35rem; padding: .65rem; overflow-wrap: anywhere; white-space: pre-wrap; border-radius: 7px; background: #202b35; color: #f7f9fa; font-size: .78rem; line-height: 1.5; }
+.brew-install a { color: #c1dfff; font-size: .86rem; }
 .checksum-link { color: #bdc8d0; font-size: .9rem; }
 .info-columns { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 4vw, 3rem); }
 .info-block { padding-top: 1.2rem; border-top: 1px solid var(--line); }

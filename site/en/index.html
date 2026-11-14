@@ -133,13 +133,23 @@
               <p>Apple Silicon only. Tested on Mac16,8 with macOS 27.0.1 (Build 26A434) and in a macOS Sequoia UTM virtual machine. The Korean UI and settings apply/restore were verified.</p>
               <div class="release-meta"><span>arm64</span><span>macOS 15 minimum</span><span>Free · MIT License</span></div>
             </div>
-            <div class="release-actions"><a class="button button-primary" href="https://github.com/powermodeapp/PowerModeManager-Releases/releases/latest/download/PowerModeManager.dmg">Download DMG</a><a class="checksum-link" href="https://github.com/powermodeapp/PowerModeManager-Releases/releases/latest/download/PowerModeManager.dmg.sha256">SHA-256 checksum</a></div>
+            <div class="release-actions">
+              <a class="button button-primary" href="https://github.com/powermodeapp/PowerModeManager-Releases/releases/latest/download/PowerModeManager.dmg">Download DMG</a>
+              <a class="checksum-link" href="https://github.com/powermodeapp/PowerModeManager-Releases/releases/latest/download/PowerModeManager.dmg.sha256">SHA-256 checksum</a>
+              <div class="brew-install">
+                <p>Install with Homebrew Cask</p>
+                <pre><code>brew tap powermodeapp/tap
+brew trust --cask powermodeapp/tap/powermodemanager
+brew install --cask powermodemanager</code></pre>
+                <a href="https://github.com/powermodeapp/homebrew-tap">Homebrew tap details</a>
+              </div>
+            </div>
           </div>
           <div class="steps" style="margin-top: 1.25rem">
             <article class="step"><h3>Open the DMG</h3><p>Download the installer and drag PowerModeManager into Applications.</p></article>
             <article class="step"><h3>Review before changing</h3><p>Open the menu bar app, inspect the proposed settings, and approve only the changes you want.</p></article>
             <article class="step"><h3>Quit from the menu</h3><p>Closing the main window leaves the menu bar app running. Choose Quit from its menu to exit.</p></article>
-            <article class="step"><h3>Update or remove</h3><p>Updates are manual. To uninstall, remove the app from Applications. Backups and optional logs remain on the Mac until you delete them.</p></article>
+            <article class="step"><h3>Update or remove</h3><p>For Homebrew installs, run <code>brew upgrade --cask powermodemanager</code>. For DMG installs, download updates manually. Backups and optional logs stay on your Mac when you remove the app.</p></article>
           </div>
         </div>
       </section>
