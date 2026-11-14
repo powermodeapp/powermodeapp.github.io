@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>PowerModeManager</title>
+    <meta name="description" content="Switch your Mac between Server and Normal power modes, preview changes, and restore from a backup.">
+    <script>
+      const language = (navigator.languages && navigator.languages[0]) || navigator.language || "en";
+      window.location.replace(language.toLowerCase().startsWith("ko") ? "/ko/" : "/en/");
+    </script>
+  </head>
+  <body>
+    <main>
+      <h1>PowerModeManager</h1>
+      <p>Choose a language to continue:</p>
+      <ul>
+        <li><a href="/en/">English</a></li>
+        <li><a href="/ko/">한국어</a></li>
+      </ul>
+    </main>
+  </body>
+</html>

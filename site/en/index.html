@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#111820">
+    <title>PowerModeManager — Power settings, one switch</title>
+    <meta name="description" content="Keep your Mac available when work needs it. Switch between Server and Normal power modes, preview changes, and restore from a backup.">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/assets/site.css">
+    <link rel="alternate" hreflang="en" href="https://powermodeapp.github.io/en/">
+    <link rel="alternate" hreflang="ko" href="https://powermodeapp.github.io/ko/">
+    <link rel="alternate" hreflang="x-default" href="https://powermodeapp.github.io/">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="/en/" aria-label="PowerModeManager home">
+          <img src="/assets/app-icon.png" alt="">
+          <span>PowerModeManager</span>
+        </a>
+        <div class="header-right">
+          <nav class="nav" aria-label="Main navigation">
+            <a href="#modes">Modes</a>
+            <a href="#safety">Safety</a>
+            <a href="#install">Install</a>
+            <a href="#privacy">Privacy</a>
+          </nav>
+          <nav class="language" aria-label="Language">
+            <a href="/en/" aria-current="page" lang="en">EN</a>
+            <a href="/ko/" lang="ko">한국어</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="wrap hero-inner">
+          <div>
+            <p class="eyebrow">Power settings, one switch</p>
+            <h1>Keep your Mac available when work needs it.</h1>
+            <p class="hero-copy">Switch between Server and Normal power modes from the menu bar. Preview the changes, authorize them, and keep a backup you can restore.</p>
+            <div class="hero-actions">
+              <span class="button button-disabled" aria-disabled="true">Release in preparation</span>
+              <a class="button button-secondary" href="#modes">See how it works</a>
+            </div>
+            <p class="status-note">PowerModeManager 1.0.0 (Build 7) is being verified. Downloads will open after the signed, notarized installer passes release checks.</p>
+            <div class="status-line" aria-label="Planned release support">
+              <span class="status-pill"><span class="status-dot" aria-hidden="true"></span>Apple Silicon · arm64</span>
+              <span class="status-pill">macOS 13–27 target</span>
+            </div>
+          </div>
+          <figure class="preview" aria-label="Illustration of the two PowerModeManager modes">
+            <div class="preview-top">
+              <div class="preview-brand"><img src="/assets/app-icon.png" alt=""><span>PowerModeManager</span></div>
+              <span class="preview-state">Menu bar app</span>
+            </div>
+            <div class="preview-panel">
+              <p class="preview-heading">POWER MODE</p>
+              <div class="preview-current"><strong>Normal</strong><span class="preview-check">Ready to switch</span></div>
+              <div class="mode-row">
+                <div class="mode-card">
+                  <span class="mode-name">Server</span>
+                  <span class="mode-detail">Keep system sleep off</span>
+                </div>
+                <div class="mode-card selected">
+                  <span class="mode-name">Normal</span>
+                  <span class="mode-detail">Use everyday sleep settings</span>
+                </div>
+              </div>
+              <div class="preview-foot"><span>Preview before applying</span><span>Backup available</span></div>
+            </div>
+            <figcaption class="preview-caption">Interface illustration, not a product screenshot.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <div class="intro-strip">
+        <div class="wrap"><p>A small menu bar utility for Macs that sometimes need to stay awake and sometimes should sleep normally.</p></div>
+      </div>
+
+      <section class="section" id="modes">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="eyebrow">Two clear modes</p>
+            <h2>Stay available. Return to everyday settings.</h2>
+            <p class="section-lead">PowerModeManager groups supported macOS power settings into two profiles, so you can change them without remembering individual `pmset` values.</p>
+          </div>
+          <div class="mode-grid">
+            <article class="mode-feature">
+              <span class="number" aria-hidden="true">01</span>
+              <h3>Server Mode</h3>
+              <p>Designed to keep system sleep off while a Mac is serving files, builds, or other work. The display can still sleep. Settings depend on what macOS exposes for your Mac and power source.</p>
+            </article>
+            <article class="mode-feature">
+              <span class="number" aria-hidden="true">02</span>
+              <h3>Normal Mode</h3>
+              <p>Return to the app’s everyday sleep profile when the Mac no longer needs to stay available. Review the proposed values before you apply either mode.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="safety">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="eyebrow">Control and recovery</p>
+            <h2>Know what changes before you apply them.</h2>
+            <p class="section-lead">Power settings can affect sleep, heat, and battery use. The app keeps the change visible and gives you a way back.</p>
+          </div>
+          <div class="detail-grid">
+            <article class="detail"><h3>Preview first</h3><p>Compare the profile values with the settings available on your Mac before applying a mode.</p></article>
+            <article class="detail"><h3>Authorize changes</h3><p>macOS asks for administrator authorization when the app needs to change system power settings.</p></article>
+            <article class="detail"><h3>Back up and restore</h3><p>The app saves a local settings backup before applying changes and provides a restore path.</p></article>
+          </div>
+          <aside class="warning" aria-label="Important battery and sleep information">
+            <span class="warning-mark" aria-hidden="true">!</span>
+            <p><strong>Use Server Mode deliberately.</strong> It disables system sleep in its profile and can increase power use and battery drain on a MacBook. Keep a laptop connected to power, provide ventilation, and restore Normal Mode when continuous availability is no longer needed. PowerModeManager does not limit battery charging or stop charging.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="install">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="eyebrow">Getting started</p>
+            <h2>Install when the verified release is ready.</h2>
+            <p class="section-lead">The first public version is being checked on supported Apple Silicon systems. The download link will appear here after the release gates pass.</p>
+          </div>
+          <div class="release-card">
+            <div>
+              <p class="eyebrow">First stable release</p>
+              <h2>1.0.0 · Build 7</h2>
+              <p>Apple Silicon only. The installer will be a signed and notarized DMG. Exact verified Mac models and macOS build numbers will be listed in the release notes.</p>
+              <div class="release-meta"><span>arm64</span><span>macOS 13–27 target</span><span>Free · MIT License</span></div>
+            </div>
+            <span class="button button-disabled" aria-disabled="true">Not available yet</span>
+          </div>
+          <div class="steps" style="margin-top: 1.25rem">
+            <article class="step"><h3>Open the DMG</h3><p>When available, download the installer and drag PowerModeManager into Applications.</p></article>
+            <article class="step"><h3>Review before changing</h3><p>Open the menu bar app, inspect the proposed settings, and approve only the changes you want.</p></article>
+            <article class="step"><h3>Update manually</h3><p>New versions will be downloaded from this site. The app does not fetch or install updates in the background.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="privacy">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="eyebrow">Privacy and support</p>
+            <h2>Your settings stay on your Mac.</h2>
+            <p class="section-lead">The app has no analytics, account, or user-data transfer feature. This static website also uses no analytics scripts.</p>
+          </div>
+          <div class="info-columns">
+            <article class="info-block">
+              <h3>Local files</h3>
+              <ul>
+                <li>Backups: <code>~/.powermode-backups</code></li>
+                <li>Optional monitoring log: <code>~/.powermode-monitor.log</code></li>
+                <li>Diagnostic reports may contain your Mac model, host name, and power settings.</li>
+              </ul>
+              <p style="margin-top: .7rem">These files may remain after uninstall. Review a report before sharing it. Read the <a href="https://github.com/powermodeapp/PowerModeManager-Releases/blob/main/PRIVACY.md">full privacy notice</a>.</p>
+            </article>
+            <article class="info-block">
+              <h3>Support and licensing</h3>
+              <p>Report problems in <a href="https://github.com/powermodeapp/PowerModeManager-Releases/issues">GitHub Issues</a> in English or Korean. Include app version, macOS version, Mac model, and steps to reproduce. Do not attach raw diagnostics unless you have reviewed them and removed private details.</p>
+              <p style="margin-top: .7rem">For a suspected security issue, use <a href="https://github.com/powermodeapp/PowerModeManager-Releases/security/advisories/new">private vulnerability reporting</a>. The app is free under the <a href="https://github.com/powermodeapp/PowerModeManager-Releases/blob/main/LICENSE">MIT License</a>; its terms allow redistribution and sale.</p>
+            </article>
+          </div>
+          <p class="section-lead" style="margin-top: 2rem">The site is hosted by GitHub Pages. GitHub may process site access information as part of its hosting service; that is separate from app data stored locally on your Mac.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <div>
+          <div class="footer-brand"><img src="/assets/app-icon.png" alt=""><span>PowerModeManager</span></div>
+          <p>Free macOS power mode manager · © 2026 Joonk72</p>
+        </div>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="https://github.com/powermodeapp/PowerModeManager-Releases">Releases</a>
+          <a href="https://github.com/powermodeapp/PowerModeManager-Releases/issues">Issues</a>
+          <a href="/ko/" lang="ko">한국어</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

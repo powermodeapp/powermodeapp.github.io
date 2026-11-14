@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#111820">
+    <title>PowerModeManager — 맥 전원 설정을 한 번에 전환</title>
+    <meta name="description" content="메뉴 막대에서 서버 모드와 일반 모드를 전환하고, 변경 내용을 미리 본 뒤 설정을 백업하고 복원하세요.">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/assets/site.css">
+    <link rel="alternate" hreflang="en" href="https://powermodeapp.github.io/en/">
+    <link rel="alternate" hreflang="ko" href="https://powermodeapp.github.io/ko/">
+    <link rel="alternate" hreflang="x-default" href="https://powermodeapp.github.io/">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="/ko/" aria-label="PowerModeManager 홈">
+          <img src="/assets/app-icon.png" alt="">
+          <span>PowerModeManager</span>
+        </a>
+        <div class="header-right">
+          <nav class="nav" aria-label="주요 메뉴">
+            <a href="#modes">모드</a>
+            <a href="#safety">안전 안내</a>
+            <a href="#install">설치</a>
+            <a href="#privacy">개인정보</a>
+          </nav>
+          <nav class="language" aria-label="언어">
+            <a href="/en/" lang="en">EN</a>
+            <a href="/ko/" aria-current="page" lang="ko">한국어</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="wrap hero-inner">
+          <div>
+            <p class="eyebrow">맥 전원 설정, 한 번의 전환</p>
+            <h1>필요할 때는 Mac을 계속 사용할 수 있게.</h1>
+            <p class="hero-copy">메뉴 막대에서 서버 모드와 일반 모드를 전환하세요. 바뀌는 설정을 미리 확인하고, 승인한 뒤 적용할 수 있습니다. 기존 설정은 백업해 복원할 수 있습니다.</p>
+            <div class="hero-actions">
+              <span class="button button-disabled" aria-disabled="true">출시 준비 중</span>
+              <a class="button button-secondary" href="#modes">사용 방법 보기</a>
+            </div>
+            <p class="status-note">PowerModeManager 1.0.0 (Build 7)을 검증하고 있습니다. 서명·공증한 설치 파일과 출시 검증을 마친 뒤 다운로드를 엽니다.</p>
+            <div class="status-line" aria-label="출시 예정 지원 범위">
+              <span class="status-pill"><span class="status-dot" aria-hidden="true"></span>Apple Silicon · arm64</span>
+              <span class="status-pill">macOS 13–27 목표</span>
+            </div>
+          </div>
+          <figure class="preview" aria-label="PowerModeManager 두 모드의 개념 그림">
+            <div class="preview-top">
+              <div class="preview-brand"><img src="/assets/app-icon.png" alt=""><span>PowerModeManager</span></div>
+              <span class="preview-state">메뉴 막대 앱</span>
+            </div>
+            <div class="preview-panel">
+              <p class="preview-heading">현재 전원 모드</p>
+              <div class="preview-current"><strong>일반 모드</strong><span class="preview-check">전환 준비</span></div>
+              <div class="mode-row">
+                <div class="mode-card">
+                  <span class="mode-name">서버 모드</span>
+                  <span class="mode-detail">시스템 잠자기 끄기</span>
+                </div>
+                <div class="mode-card selected">
+                  <span class="mode-name">일반 모드</span>
+                  <span class="mode-detail">일상적인 잠자기 사용</span>
+                </div>
+              </div>
+              <div class="preview-foot"><span>적용 전 미리 보기</span><span>백업에서 복원</span></div>
+            </div>
+            <figcaption class="preview-caption">제품 화면의 개념 그림이며 실제 앱 스크린샷은 아닙니다.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <div class="intro-strip">
+        <div class="wrap"><p>계속 켜두어야 할 때와 평소처럼 잠자기를 사용해야 할 때, 메뉴 막대에서 전원 설정을 바꾸는 앱입니다.</p></div>
+      </div>
+
+      <section class="section" id="modes">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="eyebrow">두 가지 모드</p>
+            <h2>필요할 때는 계속 켜두고, 작업이 끝나면 되돌리세요.</h2>
+            <p class="section-lead">개별 `pmset` 값을 외우지 않아도 되도록, macOS가 현재 Mac과 전원에서 지원하는 설정을 두 프로파일로 묶었습니다.</p>
+          </div>
+          <div class="mode-grid">
+            <article class="mode-feature">
+              <span class="number" aria-hidden="true">01</span>
+              <h3>서버 모드</h3>
+              <p>파일 서버, 빌드 작업처럼 Mac을 계속 사용할 수 있어야 할 때 시스템 잠자기를 끄도록 설계했습니다. 디스플레이는 잠들 수 있습니다. 실제 적용되는 설정은 Mac과 전원 상태에 따라 다릅니다.</p>
+            </article>
+            <article class="mode-feature">
+              <span class="number" aria-hidden="true">02</span>
+              <h3>일반 모드</h3>
+              <p>Mac을 계속 사용할 필요가 없을 때 앱의 평소 잠자기 프로파일로 돌아갑니다. 어느 모드든 적용 전에 바뀌는 값을 확인할 수 있습니다.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="safety">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="eyebrow">확인과 복원</p>
+            <h2>적용하기 전에 어떤 설정이 바뀌는지 확인하세요.</h2>
+            <p class="section-lead">전원 설정은 잠자기, 발열, 배터리 사용에 영향을 줍니다. 앱은 변경 내용을 보여주고 되돌릴 방법을 제공합니다.</p>
+          </div>
+          <div class="detail-grid">
+            <article class="detail"><h3>먼저 미리 보기</h3><p>모드 적용 전에 Mac에서 지원하는 프로파일 값과 현재 설정을 비교할 수 있습니다.</p></article>
+            <article class="detail"><h3>변경 승인</h3><p>시스템 전원 설정을 바꿀 때 macOS가 관리자 승인을 요청합니다.</p></article>
+            <article class="detail"><h3>백업과 복원</h3><p>앱은 모드 적용 전에 로컬 백업을 저장하고, 설정을 복원하는 기능을 제공합니다.</p></article>
+          </div>
+          <aside class="warning" aria-label="배터리와 잠자기 관련 중요 안내">
+            <span class="warning-mark" aria-hidden="true">!</span>
+            <p><strong>서버 모드는 필요할 때만 사용하세요.</strong> 서버 프로파일은 시스템 잠자기를 끄며, MacBook에서는 전력 사용과 배터리 소모가 늘 수 있습니다. 노트북은 전원 어댑터에 연결하고 통풍이 되는 곳에 두세요. 계속 켜둘 필요가 없어지면 일반 모드로 복원하세요. 이 앱은 배터리 충전량을 제한하거나 충전을 중단하지 않습니다.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="install">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="eyebrow">시작하기</p>
+            <h2>검증을 마친 설치 파일을 준비하고 있습니다.</h2>
+            <p class="section-lead">첫 공개 버전을 지원 대상인 Apple Silicon 기기에서 확인하고 있습니다. 출시 조건을 통과하면 이곳에 다운로드 링크를 표시합니다.</p>
+          </div>
+          <div class="release-card">
+            <div>
+              <p class="eyebrow">첫 안정판</p>
+              <h2>1.0.0 · Build 7</h2>
+              <p>Apple Silicon 전용입니다. 서명·공증한 DMG로 배포할 예정입니다. 실제 검증한 Mac 모델과 macOS 빌드 번호는 릴리스 노트에 공개합니다.</p>
+              <div class="release-meta"><span>arm64</span><span>macOS 13–27 목표</span><span>무료 · MIT 라이선스</span></div>
+            </div>
+            <span class="button button-disabled" aria-disabled="true">아직 다운로드할 수 없음</span>
+          </div>
+          <div class="steps" style="margin-top: 1.25rem">
+            <article class="step"><h3>DMG 열기</h3><p>배포가 시작되면 설치 파일을 내려받아 PowerModeManager를 응용 프로그램 폴더로 옮기세요.</p></article>
+            <article class="step"><h3>변경 내용 확인</h3><p>메뉴 막대 앱에서 바뀔 설정을 살펴보고, 원하는 변경만 승인하세요.</p></article>
+            <article class="step"><h3>직접 업데이트</h3><p>새 버전은 이 사이트에서 내려받습니다. 앱이 백그라운드에서 업데이트를 받거나 설치하지 않습니다.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="privacy">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="eyebrow">개인정보와 지원</p>
+            <h2>앱 데이터는 Mac에 저장됩니다.</h2>
+            <p class="section-lead">앱에는 원격 분석, 사용자 계정, 사용자 데이터 전송 기능이 없습니다. 이 정적 웹사이트도 분석 스크립트를 사용하지 않습니다.</p>
+          </div>
+          <div class="info-columns">
+            <article class="info-block">
+              <h3>로컬 파일</h3>
+              <ul>
+                <li>설정 백업: <code>~/.powermode-backups</code></li>
+                <li>선택적 모니터링 로그: <code>~/.powermode-monitor.log</code></li>
+                <li>진단 보고서에 Mac 모델, 호스트 이름, 전력 설정이 포함될 수 있습니다.</li>
+              </ul>
+              <p style="margin-top: .7rem">앱을 삭제해도 이 파일들은 남을 수 있습니다. 공유 전에 보고서 내용을 확인하세요. <a href="https://github.com/powermodeapp/PowerModeManager-Releases/blob/main/PRIVACY.md">개인정보 안내 전문</a>을 읽어보세요.</p>
+            </article>
+            <article class="info-block">
+              <h3>지원과 라이선스</h3>
+              <p>문제는 <a href="https://github.com/powermodeapp/PowerModeManager-Releases/issues">GitHub Issues</a>에서 영어 또는 한국어로 제보할 수 있습니다. 앱 버전, macOS 버전, Mac 모델, 재현 절차를 적어주세요. 원본 진단 파일은 공유 전에 민감한 정보를 확인하고 지우세요.</p>
+              <p style="margin-top: .7rem">보안 취약점은 <a href="https://github.com/powermodeapp/PowerModeManager-Releases/security/advisories/new">비공개 제보</a>를 이용하세요. 앱은 무료이며, <a href="https://github.com/powermodeapp/PowerModeManager-Releases/blob/main/LICENSE">MIT 라이선스</a>에 따라 재배포하거나 판매할 수 있습니다.</p>
+            </article>
+          </div>
+          <p class="section-lead" style="margin-top: 2rem">사이트는 GitHub Pages에서 호스팅됩니다. GitHub는 호스팅 과정에서 사이트 접속 정보를 처리할 수 있으며, 이는 Mac에 로컬로 저장되는 앱 데이터와 별개입니다.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <div>
+          <div class="footer-brand"><img src="/assets/app-icon.png" alt=""><span>PowerModeManager</span></div>
+          <p>macOS 전원 모드 관리 앱 · © 2026 Joonk72</p>
+        </div>
+        <nav class="footer-links" aria-label="하단 링크">
+          <a href="https://github.com/powermodeapp/PowerModeManager-Releases">릴리스</a>
+          <a href="https://github.com/powermodeapp/PowerModeManager-Releases/issues">문제 제보</a>
+          <a href="/en/" lang="en">English</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
