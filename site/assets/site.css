@@ -93,8 +93,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .app-screenshot img { width: 100%; height: auto; border-radius: 8px; }
 .app-screenshot figcaption { padding: .7rem .35rem .15rem; color: #c1ccd3; font-size: .86rem; }
 
-.intro-strip { border-bottom: 1px solid var(--line); background: #e8edf0; }
-.intro-strip p { max-width: 960px; margin: 0 auto; padding: 1.1rem 0; color: #3f4e59; font-size: .94rem; }
 .section { padding-block: clamp(3.8rem, 7vw, 6rem); }
 .section + .section { border-top: 1px solid var(--line); }
 .section-heading { max-width: 720px; margin-bottom: 2rem; }
